@@ -907,7 +907,7 @@
                 this.getRequest(url).then(resp => {
                     this.loading = false;
                     if (resp) {
-                        this.emps = resp.data;
+                        this.emps = resp.body;
                         this.total = resp.total
                     }
                 })
