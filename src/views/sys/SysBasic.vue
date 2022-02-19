@@ -1,0 +1,51 @@
+<template>
+    <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+        <el-tab-pane label="部门管理" name="depmana">
+            <PosMana></PosMana>
+        </el-tab-pane>
+        <el-tab-pane label="奖惩管理" name="ecmana">
+            <EcMana></EcMana>
+        </el-tab-pane>
+        <el-tab-pane label="职称管理" name="jobLevelmana">
+            <JobLevelMana></JobLevelMana>
+        </el-tab-pane>
+        <el-tab-pane label="权限管理" name="permissmana">
+            <PermissMana></PermissMana>
+        </el-tab-pane>
+        <el-tab-pane label="职位管理" name="posmana">
+            <DepMana></DepMana>
+        </el-tab-pane>
+    </el-tabs>
+</template>
+
+<script>
+    import DepMana from "../../components/sys/basic/PosMana";
+    import EcMana from "../../components/sys/basic/EcMana";
+    import JobLevelMana from "../../components/sys/basic/JobLevelMana";
+    import PermissMana from "../../components/sys/basic/PermissMana";
+    import PosMana from "../../components/sys/basic/DepMana";
+
+    export default {
+        name: "SysBasic",
+        components:{
+            DepMana,
+            EcMana,
+            JobLevelMana,
+            PermissMana,
+            PosMana
+        },
+        data() {
+            return {
+                activeName: 'depmana'
+            };
+        },
+        methods: {
+            handleClick(tab, event) {
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
